@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "grunt": "*",
+    "grunt-cli": "*",
+  },
+  "devDependencies": {
+
+  }
+}
