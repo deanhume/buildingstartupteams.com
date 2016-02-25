@@ -302,7 +302,29 @@ a img{
 
 .android-wear-section {
   position: relative;
-  height: 600px;
+    height: 400px;
+}
+
+.main-text-section {
+  padding-bottom: 250px;
+}
+
+.main-alt-link{
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.main-text{
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.main-text-font {
+  max-width: 900px;
+  margin-left: 25%;
+  padding: 24px;
+  text-align: left;
 }
 
 .android-wear-band {
@@ -325,6 +347,12 @@ a img{
     padding-top: 8px;
   }
 
+  .power-text{
+    font-size: 60px;
+    padding-bottom: 36px;
+    padding-top: 20px;
+  }
+
 .android-link {
   text-decoration: none;
   color: #8bc34a !important;
@@ -339,6 +367,10 @@ a img{
     top: -1px;
     vertical-align: middle;
   }
+
+  .mdl-typography--font-thin {
+    font-weight: 300!important;
+}
 
 .android-alt-link {
   text-decoration: none;
