@@ -2,8 +2,8 @@
   "dependencies": {
     "grunt": "*",
     "grunt-cli": "*",
-  },
-  "devDependencies": {
-
+    "grunt-contrib-cssmin": "*",
+    "grunt-htmlmin": "*",
+    "grunt-processhtml": "*"
   }
 }
