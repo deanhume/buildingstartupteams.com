@@ -49,6 +49,11 @@ a img{
   color: black !important;
 }
 
+.logo-style{
+  width: 160px;
+  padding-top: 20px;
+}
+
 .nav-text{
   color:black;
   margin-top:-47px;
@@ -297,18 +302,78 @@ a img{
   z-index: 1;
 }
 
+.left-align{
+  text-align:left;
+}
+
+.center-align{
+  text-align:center
+}
+
+.card-padding{
+  width: 50%;
+  padding-bottom:30px;
+}
+
+.footer-color{
+  background-color: #f0ad4e;
+}
+
+.footer-padding{
+  padding-top: 22px;
+}
+
+.kindle-logo{
+  width: 132px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.amazon-logo{
+  padding-top: 20px;
+}
+
+.about-author{
+  background-color:#5cb85c;
+  color:#fff
+}
+
+.about-author-text{
+  text-align:center;
+  padding-top: 30px;
+  padding-bottom:30px;
+}
+
+.about-author-desc{
+  padding-left:20px;
+  text-align:justify-content;
+}
+
+.about-author-padding{
+  color:#fff;
+  padding-bottom:30px;
+}
+
+.everywhere{
+  text-align:center;
+  padding-top:30px;
+}
+
+.card-containter{
+  width: 50%;
+  padding-bottom:30px
+}
 
 .android-wear-section {
   position: relative;
   height: 400px;
+  color: white;
 }
 
 .main-alt-link{
   text-decoration: none;
   font-size: 16px;
 }
-
-
 
 .android-wear-band {
   /*position: absolute;*/
@@ -477,8 +542,16 @@ a img{
   cursor: pointer;
 }
 
+.available-padding{
+  padding-top: 90px;
+}
+
+.available-padding-2{
+  padding-top: 100px;
+}
+
 /* Desktop */
-@media (min-width: 901px) {
+@media (min-width: 1241px) {
   .main-text{
     bottom: 0;
     width: 100%;
@@ -498,6 +571,11 @@ a img{
     padding-top: 40px;
   }
 
+  .footer-slogan {
+    font-size: 60px;
+    margin: 0 16px;
+  }
+
   .android-sub-slogan {
     font-size: 20px;
     margin: 0 16px;
@@ -512,8 +590,26 @@ a img{
 /**** Mobile layout ****/
 @media (min-width: 300px) and (max-width: 600px) {
 
+  .available-padding{
+    padding-top: 0px;
+  }
+
+  .available-padding-2{
+    padding-top: 0px;
+  }
+
+  .footer-slogan {
+    font-size: 20px;
+  }
+
+  .android-customized-section-image {
+      background: url('images/building-great-startup-teams-cover-mobile.jpg') center top no-repeat;
+      background-size: cover;
+      background-position: 30% 20%;
+  }
+
   .available-everywhere{
-    height: 890px;
+    height: 650px;
   }
 
   .android-be-together-section {
@@ -558,8 +654,73 @@ a img{
  }
 }
 
+/**** Large Tablet layout ****/
+@media (min-width: 841px) and (max-width: 1240px) {
+
+  .about-author-desc {
+      padding-left: 112px;
+      text-align: justify-content;
+      width: 500px;
+  }
+
+  .hide-large-tablet{
+    display: none;
+  }
+
+  .footer-padding {
+      padding-top: 0px;
+  }
+  .main-text{
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-text-font {
+    max-width: 900px;
+    margin-left: 20%;
+    padding: 24px;
+    text-align: left;
+  }
+
+  .android-slogan {
+    font-size: 60px;
+    margin: 0 16px;
+    padding-top: 10px;
+  }
+
+  .footer-slogan {
+    font-size: 60px;
+    margin: 0 16px;
+  }
+
+  .android-sub-slogan {
+    font-size: 20px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .available-everywhere{
+    height: 240px;
+  }
+
+}
+
+
 /**** Tablet layout ****/
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 840px) {
+
+  .available-padding{
+    padding-top: 0px;
+  }
+
+  .available-padding-2{
+    padding-top: 0px;
+  }
+
+  .footer-slogan {
+    font-size: 30px;
+  }
 
   .available-everywhere{
     height: 320px;
