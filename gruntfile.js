@@ -1,9 +1,6 @@
 module.exports = function(grunt) {
 
-
 	grunt.initConfig({
-		// remove unused CSS
-
 		// Minify the CSS
 		cssmin: {
 			target: {
@@ -23,36 +20,33 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		// Minify the HTML
-		// htmlmin: {
-		// 	dist: {
-		// 		options: {
-		// 			removeComments: true,
-		// 			collapseWhitespace: true,
-		// 			conservativeCollapse: true,
-		// 			collapseBooleanAttributes: true,
-		// 			removeAttributeQuotes: true,
-		// 			removeRedundantAttributes: true,
-		// 			keepClosingSlash: true,
-		// 			minifyJS: true,
-		// 			minifyCSS: true
-		// 		},
-		// 		files: [
-		// 		{
-		// 			expand: false,
-		// 			cwd: 'src/',
-		// 			src: ['*.html'],
-		// 			dest: './',
-		// 			ext: '.html'
-		// 		}
-		// 		]
-		// 	}
-		// }
+		// Extract the critical CSS
+		critical: {
+			dist: {
+				options: {
+					base: './',
+					css: [
+                'dist/result.min.css'
+            ],
+					minify: true,
+					dimensions: [{
+						width: 1300,
+						height: 900
+					},
+					{
+						width: 500,
+						height: 900
+					}]
+				},
+				src: 'dist/index.html',
+        dest: 'dist/index.html'
+			}
+		}
 	});
 
 grunt.loadNpmTasks('grunt-contrib-cssmin');
-//grunt.loadNpmTasks('grunt-htmlmin');
 grunt.loadNpmTasks('grunt-processhtml');
-grunt.registerTask('default', ['cssmin', 'processhtml']); //, 'htmlmin']);
+grunt.loadNpmTasks('grunt-critical');
+grunt.registerTask('default', ['cssmin', 'processhtml', 'critical']);
 
 };

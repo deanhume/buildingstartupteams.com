@@ -4,6 +4,8 @@
     "grunt-cli": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-htmlmin": "*",
-    "grunt-processhtml": "*"
+    "grunt-processhtml": "*",
+    "grunt-critical-css": "*",
+    "grunt-critical": "*"
   }
 }
