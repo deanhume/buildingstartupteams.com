@@ -29,10 +29,30 @@ this.addEventListener('fetch', event => {
           })
     );
   }
+  // Save Data support
+  else if(event.request.headers.get('save-data')){
+    //Return smaller images
+    if (/\.jpg$|.gif$|.png$/.test(event.request.url)) {
+
+      let saveDataUrl = event.request.url.substr(0, event.request.url.lastIndexOf(".")) + '-savedata' + event.request.url.substr(event.request.url.lastIndexOf("."), event.request.url.length - 1);
+
+      event.respondWith(
+        fetch(saveDataUrl, {
+          mode: 'no-cors'
+        })
+      );
+    }
+
+    // We want to save data, so restrict icons and fonts
+    if (event.request.url.includes('fonts.googleapis.com')) {
+        // return nothing
+        event.respondWith(new Response('', {status: 408, statusText: 'Request timed out.' }));
+    }
+  }
   // Check for WebP image support
-  else if (/\.jpg$|.png$/.test(event.request.url)) {
+  else if (/\.jpg$|.gif$|.png$/.test(event.request.url)) {
     // Inspect the accept header for WebP support
-    var supportsWebp = false;
+    let supportsWebp = false;
     if (event.request.headers.has('accept')){
         supportsWebp = event.request.headers
                                     .get('accept')
@@ -43,10 +63,10 @@ this.addEventListener('fetch', event => {
     if (supportsWebp)
     {
         // Clone the request
-        var req = event.request.clone();
+        let req = event.request.clone();
 
         // Build the return URL
-        var returnUrl = req.url.substr(0, req.url.lastIndexOf(".")) + ".webp";
+        let returnUrl = req.url.substr(0, req.url.lastIndexOf(".")) + ".webp";
 
         event.respondWith(
           fetch(returnUrl, {
@@ -54,7 +74,7 @@ this.addEventListener('fetch', event => {
           })
         );
     }
-}
+  }
   else{
         // Respond with everything else if we can
         event.respondWith(caches.match(event.request)
