@@ -10,7 +10,8 @@ this.addEventListener('install', event => {
   event.waitUntil(
     caches.open(currentCache.offline).then(function(cache) {
       return cache.addAll([
-          './images/logo.png',
+          'result.min.css',
+          './js/material.min.js',
           offlineUrl
       ]);
     })
@@ -46,9 +47,8 @@ this.addEventListener('fetch', event => {
           );
       }
 	}
-
   // Offline page
-  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
+  else if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
         event.respondWith(
           fetch(event.request.url).catch(error => {
               // Return the offline page

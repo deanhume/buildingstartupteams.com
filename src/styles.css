@@ -451,7 +451,7 @@ a img{
 }
 
 .android-customized-section-image {
-  background: url('images/building-great-startup-teams-cover.jpg') center top no-repeat;
+  background: url('./images/building-great-startup-teams-cover.jpg') center top no-repeat;
   background-size: cover;
   height: 400px;
   background-position: 30% 20%;
@@ -603,7 +603,7 @@ a img{
   }
 
   .android-customized-section-image {
-      background: url('images/building-great-startup-teams-cover-mobile.jpg') center top no-repeat;
+      background: url('./images/building-great-startup-teams-cover-mobile.jpg') center top no-repeat;
       background-size: cover;
       background-position: 30% 20%;
   }
