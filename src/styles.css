@@ -663,6 +663,10 @@ a img{
       width: 500px;
   }
 
+  .about-author-offline{
+      width: 600px;
+  }
+
   .hide-large-tablet{
     display: none;
   }
