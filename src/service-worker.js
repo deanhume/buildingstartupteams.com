@@ -1,6 +1,6 @@
 'use strict';
 
-var cacheVersion = 1;
+var cacheVersion = 2;
 var currentCache = {
   offline: 'offline-cache' + cacheVersion
 };
@@ -12,6 +12,18 @@ this.addEventListener('install', event => {
       return cache.addAll([
           'result.min.css',
           './js/material.min.js',
+          'https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en',
+          'https://fonts.googleapis.com/icon?family=Material+Icons',
+          'https://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2',
+          'https://fonts.gstatic.com/s/roboto/v15/vPcynSL0qHq_6dX7lKVByfesZW2xOQ-xsNqO47m55DA.woff2',
+          'https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2',
+          'https://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2',
+          'https://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2',
+          'https://fonts.gstatic.com/s/roboto/v15/vPcynSL0qHq_6dX7lKVByfesZW2xOQ-xsNqO47m55DA.woff2',
+          'https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2',
+          'https://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2',
+          'https://fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2',
+          'https://fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2',
           offlineUrl
       ]);
     })
@@ -43,10 +55,10 @@ this.addEventListener('fetch', event => {
       );
     }
 
-    // We want to save data, so restrict icons and fonts
+    // We want to save data, so restrict icons and fonts too
     if (event.request.url.includes('fonts.googleapis.com')) {
         // return nothing
-        event.respondWith(new Response('', {status: 408, statusText: 'Request timed out.' }));
+        event.respondWith(new Response('', {status: 408, statusText: 'Ignore fonts to save data.' }));
     }
   }
   // Check for WebP image support
