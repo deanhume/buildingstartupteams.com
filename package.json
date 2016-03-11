@@ -6,6 +6,7 @@
     "grunt-htmlmin": "*",
     "grunt-processhtml": "*",
     "grunt-critical-css": "*",
-    "grunt-critical": "*"
+    "grunt-critical": "*",
+    "grunt-contrib-copy": "*"
   }
 }

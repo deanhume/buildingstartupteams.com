@@ -41,12 +41,23 @@ module.exports = function(grunt) {
 				src: 'dist/index.html',
         dest: 'dist/index.html'
 			}
+		},
+		// Copy all of the images across to dist
+		copy: {
+		  main: {
+		    expand: true,
+				flatten: true,
+				 filter: 'isFile',
+		    src: 'src/images/*',
+		    dest: 'dist/images/',
+		  }
 		}
 	});
 
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-processhtml');
 grunt.loadNpmTasks('grunt-critical');
-grunt.registerTask('default', ['cssmin', 'processhtml', 'critical']);
+grunt.loadNpmTasks('grunt-contrib-copy');
 
+grunt.registerTask('default', ['cssmin', 'processhtml', 'critical', 'copy']);
 };
