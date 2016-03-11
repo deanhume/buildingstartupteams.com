@@ -1,0 +1,15 @@
+{
+  "lang": "en",
+  "background_color": "#09adec",
+  "name": "Building Great Startup Teams",
+  "short_name": "Building Great Startup Teams",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "./images/logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait"
+}
