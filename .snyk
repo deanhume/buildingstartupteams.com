@@ -10,3 +10,5 @@ patch:
         patched: '2017-05-24T08:26:05.197Z'
     - grunt-critical > critical > postcss-image-inliner > asset-resolver > debug > ms:
         patched: '2017-05-24T08:26:05.197Z'
+    - grunt-critical > critical > penthouse > phantomjs-prebuilt > extract-zip > debug > ms:
+        patched: '2017-08-16T08:26:09.135Z'
