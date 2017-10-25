@@ -10,6 +10,8 @@ patch:
         patched: '2017-05-24T08:26:05.197Z'
     - grunt-critical > critical > postcss-image-inliner > asset-resolver > debug > ms:
         patched: '2017-05-24T08:26:05.197Z'
+    - grunt-critical > critical > penthouse > puppeteer > extract-zip > debug > ms:
+        patched: '2017-10-25T08:26:10.517Z'
   'npm:debug:20170905':
     - grunt-critical > critical > postcss-image-inliner > debug:
         patched: '2017-09-27T08:26:10.847Z'
@@ -17,3 +19,5 @@ patch:
         patched: '2017-09-27T08:26:10.847Z'
     - grunt-critical > critical > penthouse > phantomjs-prebuilt > extract-zip > debug:
         patched: '2017-09-27T08:26:10.847Z'
+    - grunt-critical > critical > penthouse > puppeteer > extract-zip > debug:
+        patched: '2017-10-25T08:26:10.517Z'
