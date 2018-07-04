@@ -27,3 +27,9 @@ patch:
   'npm:tunnel-agent:20170305':
     - grunt-critical-css > critical-css > phantomjs > request > tunnel-agent:
         patched: '2018-06-27T07:46:31.626Z'
+  'npm:http-signature:20150122':
+    - grunt-critical-css > critical-css > phantomjs > request > http-signature:
+        patched: '2018-07-04T07:46:27.765Z'
+  'npm:lodash:20180130':
+    - grunt-critical > critical > oust > cheerio > lodash:
+        patched: '2018-07-04T07:46:27.765Z'
