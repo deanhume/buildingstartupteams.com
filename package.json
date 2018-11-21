@@ -8,7 +8,7 @@
     "grunt-critical-css": "*",
     "grunt-critical": "*",
     "grunt-contrib-copy": "*",
-    "snyk": "^1.88.1"
+    "snyk": "^1.110.0"
   },
   "scripts": {
     "snyk-protect": "snyk protect",
