@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.13.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -33,3 +33,9 @@ patch:
   'npm:lodash:20180130':
     - grunt-critical > critical > oust > cheerio > lodash:
         patched: '2018-07-04T07:46:27.765Z'
+  'npm:hawk:20160119':
+    - grunt-critical-css > critical-css > phantomjs > request > hawk:
+        patched: '2018-11-21T08:46:43.138Z'
+  'npm:request:20160119':
+    - grunt-critical-css > critical-css > phantomjs > request:
+        patched: '2018-11-21T08:46:43.138Z'
